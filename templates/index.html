@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chess Clock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div id="setup">
+    <h1>Chess Clock</h1>
+    <label>Minutes per player:</label>
+    <input id="minutes" type="number" value="10" min="1">
+    <button onclick="startGame()">Start Game</button>
+</div>
+
+<div id="game" class="hidden">
+
+    <!-- White clock on top -->
+    <button id="white" class="clock white" onclick="pressClock('white')">
+        <div>WHITE</div>
+        <span id="whiteTime">10:00</span>
+    </button>
+
+    <!-- Status badge in the middle -->
+    <div id="status">White starts</div>
+
+    <!-- Black clock on bottom -->
+    <button id="black" class="clock black" onclick="pressClock('black')">
+        <div>BLACK</div>
+        <span id="blackTime">10:00</span>
+    </button>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
